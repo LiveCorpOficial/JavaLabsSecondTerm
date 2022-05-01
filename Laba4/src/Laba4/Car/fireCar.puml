@@ -1,0 +1,22 @@
+@startuml
+
+title FireCar Class Diagram
+
+  namespace Laba4 {
+    namespace firecar {
+      class FireEngine {
+          # REGEX : String
+          - quantityWater : double
+          + FireEngine()
+          + print()
+          + setQuantityWater()
+          + setRegisterCode()
+          ~ FireEngine()
+      }
+    }
+  }
+
+
+  Laba4.firecar.FireEngine -up-|> Laba4.car.Car
+
+@enduml

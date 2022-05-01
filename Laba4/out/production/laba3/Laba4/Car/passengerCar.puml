@@ -1,0 +1,20 @@
+@startuml
+
+title Passenger Class Diagram
+
+  namespace Laba4 {
+    namespace passenger {
+      class Passenger {
+          - numberOfPassengers : int
+          + Passenger()
+          + print()
+          + setNumberPassengers()
+          ~ Passenger()
+      }
+    }
+  }
+
+
+  Laba4.passenger.Passenger -up-|> Laba4.car.Car
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+
+title BUS Class Diagram
+
+  namespace Laba4 {
+    namespace bus {
+      class Bus {
+          - seat : int
+          + getSeat()
+          + setSeat()
+          ~ Bus()
+          ~ Bus()
+      }
+    }
+  }
+    Laba4.bus.Bus -up-|> Laba4.car.Car
+
+@enduml
+

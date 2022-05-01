@@ -1,0 +1,21 @@
+@startuml
+
+title Truck Class Diagram
+
+  namespace Laba4 {
+    namespace truck {
+      class Truck {
+          - capacity : int
+          + Truc
+          k()
+          + print()
+          + setCapacity()
+          ~ Truck()
+      }
+    }
+  }
+  
+
+  Laba4.truck.Truck -up-|> Laba4.car.Car
+
+@enduml

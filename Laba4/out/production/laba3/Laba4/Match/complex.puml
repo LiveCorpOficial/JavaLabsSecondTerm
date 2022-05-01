@@ -1,0 +1,44 @@
+@startuml
+
+title Complex Class Diagram
+
+  namespace Laba4 {
+    namespace complex {
+      class Complex {
+          - image : double
+          - real : double
+          + Complex()
+          + Complex()
+          + getImage()
+          + getReal()
+          + printAlgebraic()
+          + printTrigonometric()
+          {static} ~ add()
+          {static} ~ add()
+          {static} ~ divide()
+          {static} ~ getLinked()
+          {static} ~ isEqual()
+          {static} ~ multiply()
+          {static} ~ substract()
+          {static} ~ substract()
+      }
+    }
+  }
+
+  namespace Laba4 {
+    namespace complex {
+      class HyperbolicCalc {
+          {static} + arctan()
+          {static} + ch()
+          {static} + cos()
+          {static} + cth()
+          {static} + sh()
+          {static} + sin()
+          {static} + tan()
+          {static} + th()
+          {static} - exp()
+      }
+    }
+  }
+
+@enduml

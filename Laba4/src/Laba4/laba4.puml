@@ -1,0 +1,81 @@
+@startuml
+
+title UML Diagram\n
+
+  namespace Laba4 {
+    namespace Grafick {
+        class Axi {
+            }
+        class Comment {
+            }
+        class Curve {
+            }
+        class Dot {
+            }
+        abstract class Grafick {
+            }
+        class Grid {
+            }
+        class Window {
+            }
+      }
+
+      class Main {
+      }
+
+  namespace bus {
+      class Bus {
+      }
+      }
+
+  namespace car {
+      abstract class Car {
+      }
+      namespace ase {
+      enum CarStatus {
+      }
+      }
+      }
+  namespace carbase {
+      class CarBase {
+      }
+      }
+  namespace complex {
+      class Complex {
+      }
+
+      }
+  namespace engine {
+      class Engine {
+      }
+      }
+  namespace firecar {
+      class FireEngine {
+      }
+      }
+  namespace passenger {
+      class Passenger {
+      }
+      }
+  namespace truck {
+      class Truck {
+      }
+      }
+}
+
+   Laba4.Grafick.Axi -up-|> Laba4.Grafick.Grafick
+   Laba4.Grafick.Axi o-- Laba4.Grafick.Dot : A
+   Laba4.Grafick.Axi o-- Laba4.Grafick.Dot : B
+   Laba4.Grafick.Comment -up-|>  Laba4.Grafick.Grafick
+   Laba4.Grafick.Curve -up-|>  Laba4.Grafick.Grafick
+   Laba4.Grafick.Dot -up-|>  Laba4.Grafick.Grafick
+   Laba4.Grafick.Grid -up-|>  Laba4.Grafick.Grafick
+   Laba4.Grafick.Window o--  Laba4.Grafick.Grid : grid
+   Laba4.bus.Bus -up-|>  Laba4.car.Car
+   Laba4.car.Car o--  Laba4.car.Car.ColorsCar : color
+   Laba4.car.Car o--  Laba4.engine.Engine : engine
+   Laba4.firecar.FireEngine -up-|>  Laba4.car.Car
+   Laba4.passenger.Passenger -up-|>  Laba4.car.Car
+   Laba4.truck.Truck -up-|>  Laba4.car.Car
+
+@enduml

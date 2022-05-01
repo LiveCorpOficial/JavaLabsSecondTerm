@@ -1,0 +1,71 @@
+@startuml
+
+title MotorDepot Class Diagram
+
+  namespace Laba4 {
+    namespace car {
+      namespace carbase {
+        class Laba4.carbase.CarBase {
+            ~ maxSize : int
+            ~ slots : ArrayList<Slot>
+            + CarBase()
+            + add()
+            + breakCar()
+            + printOnBase()
+            + printOnFlight()
+            + printOnRepair()
+            + removeBySerialNumber()
+            + toBase()
+            + toFlight()
+            + toRepair()
+            - getCarIndexBySerialNumber()
+        }
+      }
+    }
+  }
+
+
+  namespace Laba4 {
+    namespace car {
+      namespace carbase {
+        class Laba4.carbase.CarBase.Slot {
+            - isBroken : boolean
+            - Slot()
+        }
+      }
+    }
+  }
+
+
+  namespace Laba4 {
+    namespace car {
+      namespace carbase {
+        enum Status {
+          onBase
+          onFlight
+          onRepair
+        }
+      }
+    }
+  }
+
+
+  namespace Laba4 {
+    namespace car {
+      namespace carbase {
+        enum CarStatus {
+          Base
+          Flight
+          None
+          Repair
+        }
+      }
+    }
+  }
+
+  Laba4.carbase.CarBase +-down- Laba4.carbase.CarBase.Slot
+  Laba4.carbase.CarBase.Slot o-- Laba4.car.Car : car
+  Laba4.carbase.CarBase.Slot o-- Laba4.carbase.CarBase.Slot.Status : carStatus
+  Laba4.carbase.CarBase.Slot +-down- Laba4.carbase.CarBase.Slot.Status
+
+@enduml

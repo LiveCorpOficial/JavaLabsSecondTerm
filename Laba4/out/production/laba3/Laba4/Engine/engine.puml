@@ -1,0 +1,32 @@
+@startuml
+
+title Engine Class Diagram
+
+  namespace Laba4 {
+    namespace engine {
+      class Engine {
+          - consumption : double
+          - numberCylinders : int
+          - power : int
+          - serialNumber : String
+          - typeOfFuel : String
+          - workingVolume : int
+          + Engine()
+          + getConsumption()
+          + getNumberCylinders()
+          + getPower()
+          + getSerialNumber()
+          + getTypeOfFuel()
+          + getWorkingVolume()
+          + print()
+          + setConsumption()
+          + setNumberCylinders()
+          + setPower()
+          + setSerialNumber()
+          + setTypeOfFuel()
+          + setWorkingVolume()
+      }
+    }
+  }
+
+@enduml
